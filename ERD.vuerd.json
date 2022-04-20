@@ -3,9 +3,9 @@
     "version": "2.2.11",
     "width": 2000,
     "height": 2000,
-    "scrollTop": -296,
-    "scrollLeft": -312,
-    "zoomLevel": 0.8,
+    "scrollTop": -299,
+    "scrollLeft": -314,
+    "zoomLevel": 0.9,
     "show": {
       "tableComment": true,
       "columnComment": true,
@@ -68,6 +68,29 @@
               "widthDefault": 60
             },
             "id": "3327bfed-c622-476f-b0fb-3a6df56eb43d"
+          },
+          {
+            "name": "first_name",
+            "comment": "",
+            "dataType": "VARCHAR(20)",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": true
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": false,
+              "pfk": false,
+              "widthName": 62.68994140625,
+              "widthComment": 60,
+              "widthDataType": 87.71875,
+              "widthDefault": 60
+            },
+            "id": "8dff2401-0104-4214-82a7-862f893af479"
           },
           {
             "name": "name",
@@ -209,10 +232,10 @@
           }
         ],
         "ui": {
-          "active": false,
+          "active": true,
           "left": 278.1747,
           "top": 360.8892,
-          "zIndex": 45,
+          "zIndex": 12,
           "widthName": 60,
           "widthComment": 60
         },
@@ -455,10 +478,10 @@
           }
         ],
         "ui": {
-          "active": true,
+          "active": false,
           "left": 775.4438,
           "top": 328.8889,
-          "zIndex": 55,
+          "zIndex": 2,
           "widthName": 72.0908203125,
           "widthComment": 60
         },
@@ -483,7 +506,7 @@
             "3327bfed-c622-476f-b0fb-3a6df56eb43d"
           ],
           "x": 667.18690703125,
-          "y": 414.0142,
+          "y": 419.1392,
           "direction": "right"
         },
         "end": {
@@ -509,7 +532,7 @@
             "3327bfed-c622-476f-b0fb-3a6df56eb43d"
           ],
           "x": 667.18690703125,
-          "y": 520.2642000000001,
+          "y": 535.6392000000001,
           "direction": "right"
         },
         "end": {
