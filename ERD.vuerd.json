@@ -4,7 +4,7 @@
     "width": 2000,
     "height": 2000,
     "scrollTop": -299,
-    "scrollLeft": -314,
+    "scrollLeft": -318,
     "zoomLevel": 0.9,
     "show": {
       "tableComment": true,
@@ -208,6 +208,29 @@
             "id": "2bab8427-7b41-4754-a74d-3e4bf2577b4c"
           },
           {
+            "name": "id_card_type",
+            "comment": "",
+            "dataType": "SMALLINT",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": true
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": false,
+              "pfk": false,
+              "widthName": 76.43896484375,
+              "widthComment": 60,
+              "widthDataType": 65.57177734375,
+              "widthDefault": 60
+            },
+            "id": "3df71eed-972e-47fd-86c5-2aa03f0852e2"
+          },
+          {
             "name": "company",
             "comment": "",
             "dataType": "VARCHAR(255)",
@@ -302,9 +325,9 @@
         ],
         "ui": {
           "active": true,
-          "left": 283.7303,
-          "top": 318.6674,
-          "zIndex": 34,
+          "left": 258.175,
+          "top": 300.8898,
+          "zIndex": 52,
           "widthName": 60,
           "widthComment": 60
         },
@@ -574,8 +597,8 @@
           "columnIds": [
             "3327bfed-c622-476f-b0fb-3a6df56eb43d"
           ],
-          "x": 672.7425070312499,
-          "y": 392.2924,
+          "x": 656.5626953125,
+          "y": 379.6398,
           "direction": "right"
         },
         "end": {
@@ -584,7 +607,7 @@
             "33c0b872-ea40-4ee3-8502-b8c2e2c712d3"
           ],
           "x": 775.4438,
-          "y": 397.3889,
+          "y": 534.3888999999999,
           "direction": "left"
         },
         "constraintName": "fk_users_to_transactions",
@@ -600,8 +623,8 @@
           "columnIds": [
             "3327bfed-c622-476f-b0fb-3a6df56eb43d"
           ],
-          "x": 672.7425070312499,
-          "y": 539.5424,
+          "x": 656.5626953125,
+          "y": 537.1397999999999,
           "direction": "right"
         },
         "end": {
@@ -610,7 +633,7 @@
             "00532896-6c06-404a-bb3a-6d6423df27ae"
           ],
           "x": 775.4438,
-          "y": 534.3888999999999,
+          "y": 397.3889,
           "direction": "left"
         },
         "constraintName": "fk_users_to_transactions",
