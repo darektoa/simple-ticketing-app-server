@@ -185,6 +185,29 @@
             "id": "11548a64-6043-4383-98c0-2e750fd85e1a"
           },
           {
+            "name": "company",
+            "comment": "",
+            "dataType": "VARCHAR(255)",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": false
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": false,
+              "pfk": false,
+              "widthName": 60,
+              "widthComment": 60,
+              "widthDataType": 94.94873046875,
+              "widthDefault": 60
+            },
+            "id": "4f257f56-2c35-4e05-9687-e3990bd07f60"
+          },
+          {
             "name": "deleted_at",
             "comment": "",
             "dataType": "TIMESTAMP",
@@ -258,7 +281,7 @@
           "active": true,
           "left": 287.0636,
           "top": 337.5561,
-          "zIndex": 25,
+          "zIndex": 27,
           "widthName": 60,
           "widthComment": 60
         },
@@ -529,7 +552,7 @@
             "3327bfed-c622-476f-b0fb-3a6df56eb43d"
           ],
           "x": 676.07580703125,
-          "y": 400.9311,
+          "y": 406.0561,
           "direction": "right"
         },
         "end": {
@@ -538,7 +561,7 @@
             "33c0b872-ea40-4ee3-8502-b8c2e2c712d3"
           ],
           "x": 775.4438,
-          "y": 534.3888999999999,
+          "y": 397.3889,
           "direction": "left"
         },
         "constraintName": "fk_users_to_transactions",
@@ -555,7 +578,7 @@
             "3327bfed-c622-476f-b0fb-3a6df56eb43d"
           ],
           "x": 676.07580703125,
-          "y": 527.6811,
+          "y": 543.0561,
           "direction": "right"
         },
         "end": {
@@ -564,7 +587,7 @@
             "00532896-6c06-404a-bb3a-6d6423df27ae"
           ],
           "x": 775.4438,
-          "y": 397.3889,
+          "y": 534.3888999999999,
           "direction": "left"
         },
         "constraintName": "fk_users_to_transactions",
