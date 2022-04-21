@@ -4,7 +4,7 @@
     "width": 2000,
     "height": 2000,
     "scrollTop": -299,
-    "scrollLeft": -318,
+    "scrollLeft": -295,
     "zoomLevel": 0.9,
     "show": {
       "tableComment": true,
@@ -231,6 +231,29 @@
             "id": "3df71eed-972e-47fd-86c5-2aa03f0852e2"
           },
           {
+            "name": "id_card_number",
+            "comment": "",
+            "dataType": "VARCHAR(20)",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": true
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": false,
+              "pfk": false,
+              "widthName": 95.9453125,
+              "widthComment": 60,
+              "widthDataType": 87.71875,
+              "widthDefault": 60
+            },
+            "id": "48a68881-4da9-4634-b980-100eea322be0"
+          },
+          {
             "name": "company",
             "comment": "",
             "dataType": "VARCHAR(255)",
@@ -324,10 +347,10 @@
           }
         ],
         "ui": {
-          "active": true,
-          "left": 258.175,
-          "top": 300.8898,
-          "zIndex": 52,
+          "active": false,
+          "left": 257.0639,
+          "top": 298.6676,
+          "zIndex": 54,
           "widthName": 60,
           "widthComment": 60
         },
@@ -597,8 +620,8 @@
           "columnIds": [
             "3327bfed-c622-476f-b0fb-3a6df56eb43d"
           ],
-          "x": 656.5626953125,
-          "y": 379.6398,
+          "x": 674.95794296875,
+          "y": 382.5426,
           "direction": "right"
         },
         "end": {
@@ -607,7 +630,7 @@
             "33c0b872-ea40-4ee3-8502-b8c2e2c712d3"
           ],
           "x": 775.4438,
-          "y": 534.3888999999999,
+          "y": 397.3889,
           "direction": "left"
         },
         "constraintName": "fk_users_to_transactions",
@@ -623,8 +646,8 @@
           "columnIds": [
             "3327bfed-c622-476f-b0fb-3a6df56eb43d"
           ],
-          "x": 656.5626953125,
-          "y": 537.1397999999999,
+          "x": 674.95794296875,
+          "y": 550.2926,
           "direction": "right"
         },
         "end": {
@@ -633,7 +656,7 @@
             "00532896-6c06-404a-bb3a-6d6423df27ae"
           ],
           "x": 775.4438,
-          "y": 397.3889,
+          "y": 534.3888999999999,
           "direction": "left"
         },
         "constraintName": "fk_users_to_transactions",
