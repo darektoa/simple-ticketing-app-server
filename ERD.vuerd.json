@@ -323,6 +323,29 @@
             "id": "143ea1ce-39be-4af4-901a-65724ab71f2e"
           },
           {
+            "name": "province",
+            "comment": "",
+            "dataType": "VARCHAR(100)",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": true
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": false,
+              "pfk": false,
+              "widthName": 60,
+              "widthComment": 60,
+              "widthDataType": 94.94873046875,
+              "widthDefault": 60
+            },
+            "id": "8652f45a-9f5a-4f24-b0e2-b46d7b4045b8"
+          },
+          {
             "name": "deleted_at",
             "comment": "",
             "dataType": "TIMESTAMP",
@@ -393,7 +416,7 @@
           }
         ],
         "ui": {
-          "active": true,
+          "active": false,
           "left": 258.1748,
           "top": 238.6685,
           "zIndex": 102,
