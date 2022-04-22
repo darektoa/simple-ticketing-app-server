@@ -254,6 +254,29 @@
             "id": "48a68881-4da9-4634-b980-100eea322be0"
           },
           {
+            "name": "blood_type",
+            "comment": "",
+            "dataType": "VARCHAR(3)",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": false
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": false,
+              "pfk": false,
+              "widthName": 65.60986328125,
+              "widthComment": 60,
+              "widthDataType": 80.48876953125,
+              "widthDefault": 60
+            },
+            "id": "b585a323-0617-4746-888d-8e66bdadc9e1"
+          },
+          {
             "name": "company",
             "comment": "",
             "dataType": "VARCHAR(255)",
@@ -347,10 +370,10 @@
           }
         ],
         "ui": {
-          "active": false,
-          "left": 257.0639,
-          "top": 298.6676,
-          "zIndex": 54,
+          "active": true,
+          "left": 257.0637,
+          "top": 298.6679,
+          "zIndex": 60,
           "widthName": 60,
           "widthComment": 60
         },
@@ -620,8 +643,8 @@
           "columnIds": [
             "3327bfed-c622-476f-b0fb-3a6df56eb43d"
           ],
-          "x": 674.95794296875,
-          "y": 382.5426,
+          "x": 674.9577429687499,
+          "y": 387.6679,
           "direction": "right"
         },
         "end": {
@@ -646,8 +669,8 @@
           "columnIds": [
             "3327bfed-c622-476f-b0fb-3a6df56eb43d"
           ],
-          "x": 674.95794296875,
-          "y": 550.2926,
+          "x": 674.9577429687499,
+          "y": 565.6678999999999,
           "direction": "right"
         },
         "end": {
