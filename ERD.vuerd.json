@@ -3,8 +3,8 @@
     "version": "2.2.11",
     "width": 2000,
     "height": 2000,
-    "scrollTop": -299,
-    "scrollLeft": -295,
+    "scrollTop": -283,
+    "scrollLeft": -255,
     "zoomLevel": 0.9,
     "show": {
       "tableComment": true,
@@ -300,6 +300,29 @@
             "id": "4f257f56-2c35-4e05-9687-e3990bd07f60"
           },
           {
+            "name": "nationality",
+            "comment": "",
+            "dataType": "VARCHAR(100)",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": true
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": false,
+              "pfk": false,
+              "widthName": 60.5380859375,
+              "widthComment": 60,
+              "widthDataType": 94.94873046875,
+              "widthDefault": 60
+            },
+            "id": "143ea1ce-39be-4af4-901a-65724ab71f2e"
+          },
+          {
             "name": "deleted_at",
             "comment": "",
             "dataType": "TIMESTAMP",
@@ -371,9 +394,9 @@
         ],
         "ui": {
           "active": true,
-          "left": 257.0637,
-          "top": 298.6679,
-          "zIndex": 60,
+          "left": 258.1748,
+          "top": 238.6685,
+          "zIndex": 102,
           "widthName": 60,
           "widthComment": 60
         },
@@ -643,8 +666,8 @@
           "columnIds": [
             "3327bfed-c622-476f-b0fb-3a6df56eb43d"
           ],
-          "x": 674.9577429687499,
-          "y": 387.6679,
+          "x": 676.06884296875,
+          "y": 332.7935,
           "direction": "right"
         },
         "end": {
@@ -653,7 +676,7 @@
             "33c0b872-ea40-4ee3-8502-b8c2e2c712d3"
           ],
           "x": 775.4438,
-          "y": 397.3889,
+          "y": 534.3888999999999,
           "direction": "left"
         },
         "constraintName": "fk_users_to_transactions",
@@ -669,8 +692,8 @@
           "columnIds": [
             "3327bfed-c622-476f-b0fb-3a6df56eb43d"
           ],
-          "x": 674.9577429687499,
-          "y": 565.6678999999999,
+          "x": 676.06884296875,
+          "y": 521.0435,
           "direction": "right"
         },
         "end": {
@@ -679,7 +702,7 @@
             "00532896-6c06-404a-bb3a-6d6423df27ae"
           ],
           "x": 775.4438,
-          "y": 534.3888999999999,
+          "y": 397.3889,
           "direction": "left"
         },
         "constraintName": "fk_users_to_transactions",
