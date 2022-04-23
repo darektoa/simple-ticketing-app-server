@@ -838,6 +838,29 @@
             "id": "325fd1a0-c328-4ca1-9b44-c3a594212a69"
           },
           {
+            "name": "deleted_at",
+            "comment": "",
+            "dataType": "TIMESTAMP",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": false
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": false,
+              "pfk": false,
+              "widthName": 62.7216796875,
+              "widthComment": 60,
+              "widthDataType": 76.87060546875,
+              "widthDefault": 60
+            },
+            "id": "57beec79-0172-4b91-af67-5d2d7193a853"
+          },
+          {
             "name": "created_at",
             "comment": "",
             "dataType": "TIMESTAMP",
@@ -885,7 +908,7 @@
           }
         ],
         "ui": {
-          "active": true,
+          "active": false,
           "left": 774.7503,
           "top": 737.5,
           "zIndex": 139,
