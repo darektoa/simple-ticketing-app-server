@@ -392,6 +392,29 @@
             "id": "7fedb1e9-54d1-4bf3-abf1-d9815e720d2a"
           },
           {
+            "name": "address",
+            "comment": "",
+            "dataType": "TEXT",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": true
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": false,
+              "pfk": false,
+              "widthName": 60,
+              "widthComment": 60,
+              "widthDataType": 60,
+              "widthDefault": 60
+            },
+            "id": "efc9f390-e3b6-4a52-9f5b-b1b81aee9db0"
+          },
+          {
             "name": "deleted_at",
             "comment": "",
             "dataType": "TIMESTAMP",
