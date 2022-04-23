@@ -3,9 +3,9 @@
     "version": "2.2.11",
     "width": 2000,
     "height": 2000,
-    "scrollTop": -330,
-    "scrollLeft": -317,
-    "zoomLevel": 0.8,
+    "scrollTop": -599,
+    "scrollLeft": -500,
+    "zoomLevel": 1,
     "show": {
       "tableComment": true,
       "columnComment": true,
@@ -18,7 +18,7 @@
       "relationship": true
     },
     "database": "MySQL",
-    "databaseName": "db_simple_ticketing",
+    "databaseName": "",
     "canvasType": "ERD",
     "language": "GraphQL",
     "tableCase": "pascalCase",
@@ -488,7 +488,7 @@
           "active": false,
           "left": 258.1748,
           "top": 232.0019,
-          "zIndex": 104,
+          "zIndex": 136,
           "widthName": 60,
           "widthComment": 60
         },
@@ -740,6 +740,160 @@
         },
         "visible": true,
         "id": "cdd5d1de-ac34-4840-b837-b4ff1ac9d5c1"
+      },
+      {
+        "name": "emergency_contacts",
+        "comment": "",
+        "columns": [
+          {
+            "name": "id",
+            "comment": "",
+            "dataType": "BIGINT(20)",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": true,
+              "unique": false,
+              "notNull": true
+            },
+            "ui": {
+              "active": false,
+              "pk": true,
+              "fk": false,
+              "pfk": false,
+              "widthName": 60,
+              "widthComment": 60,
+              "widthDataType": 68.45361328125,
+              "widthDefault": 60
+            },
+            "id": "1ec33893-ebd1-4ce2-bb25-066bc060d090"
+          },
+          {
+            "name": "user_id",
+            "comment": "",
+            "dataType": "BIGINT(20)",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": true
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": true,
+              "pfk": false,
+              "widthName": 60,
+              "widthComment": 60,
+              "widthDataType": 68.45361328125,
+              "widthDefault": 60
+            },
+            "id": "26a0ac1f-ce19-49b1-8fce-507cea64b32f"
+          },
+          {
+            "name": "name",
+            "comment": "",
+            "dataType": "VARCHAR(100)",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": true
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": false,
+              "pfk": false,
+              "widthName": 60,
+              "widthComment": 60,
+              "widthDataType": 94.94873046875,
+              "widthDefault": 60
+            },
+            "id": "d69753b6-6f08-42d0-8a40-5b78ca08b683"
+          },
+          {
+            "name": "phone",
+            "comment": "",
+            "dataType": "VARCHAR(20)",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": true
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": false,
+              "pfk": false,
+              "widthName": 60,
+              "widthComment": 60,
+              "widthDataType": 87.71875,
+              "widthDefault": 60
+            },
+            "id": "325fd1a0-c328-4ca1-9b44-c3a594212a69"
+          },
+          {
+            "name": "created_at",
+            "comment": "",
+            "dataType": "TIMESTAMP",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": true
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": false,
+              "pfk": false,
+              "widthName": 63.4326171875,
+              "widthComment": 60,
+              "widthDataType": 76.87060546875,
+              "widthDefault": 60
+            },
+            "id": "1f41b603-90ff-46ea-acc1-eb3d917ac710"
+          },
+          {
+            "name": "updated_at",
+            "comment": "",
+            "dataType": "TIMESTAMP",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": true
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": false,
+              "pfk": false,
+              "widthName": 67.0634765625,
+              "widthComment": 60,
+              "widthDataType": 76.87060546875,
+              "widthDefault": 60
+            },
+            "id": "6a38df7e-9ca7-4fd7-931b-a9641d356ca3"
+          }
+        ],
+        "ui": {
+          "active": true,
+          "left": 774.7503,
+          "top": 737.5,
+          "zIndex": 139,
+          "widthName": 121.95166015625,
+          "widthComment": 60
+        },
+        "visible": true,
+        "id": "88d031b7-7a7d-4cac-bbfa-cfeef74b684f"
       }
     ],
     "indexes": []
@@ -800,6 +954,32 @@
         "constraintName": "fk_users_to_transactions",
         "visible": true,
         "id": "89336782-a7be-4500-96c6-29bc46387507"
+      },
+      {
+        "identification": false,
+        "relationshipType": "OneN",
+        "startRelationshipType": "Dash",
+        "start": {
+          "tableId": "f53de608-4614-4ef6-a04c-97f72f1bdc3b",
+          "columnIds": [
+            "3327bfed-c622-476f-b0fb-3a6df56eb43d"
+          ],
+          "x": 467.121821484375,
+          "y": 690.5019,
+          "direction": "bottom"
+        },
+        "end": {
+          "tableId": "88d031b7-7a7d-4cac-bbfa-cfeef74b684f",
+          "columnIds": [
+            "26a0ac1f-ce19-49b1-8fce-507cea64b32f"
+          ],
+          "x": 774.7503,
+          "y": 833.5,
+          "direction": "left"
+        },
+        "constraintName": "fk_users_to_emergency_contacts",
+        "visible": true,
+        "id": "9c519c09-11e6-48bf-a500-e3bf9a7c1df5"
       }
     ]
   }
