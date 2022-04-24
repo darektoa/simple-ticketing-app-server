@@ -1048,6 +1048,114 @@
         },
         "visible": true,
         "id": "3930007e-fb35-4836-8ecf-7528625cc344"
+      },
+      {
+        "name": "transaction_addons",
+        "comment": "",
+        "columns": [
+          {
+            "name": "id",
+            "comment": "",
+            "dataType": "BIGINT(20)",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": true,
+              "unique": false,
+              "notNull": true
+            },
+            "ui": {
+              "active": false,
+              "pk": true,
+              "fk": false,
+              "pfk": false,
+              "widthName": 60,
+              "widthComment": 60,
+              "widthDataType": 68.45361328125,
+              "widthDefault": 60
+            },
+            "id": "96e1c866-86d0-441d-bab2-b4308ae343cd"
+          },
+          {
+            "name": "transaction_id",
+            "comment": "",
+            "dataType": "BIGINT(20)",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": true
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": true,
+              "pfk": false,
+              "widthName": 82.93896484375,
+              "widthComment": 60,
+              "widthDataType": 68.45361328125,
+              "widthDefault": 60
+            },
+            "id": "5826d802-711d-42ea-af78-26af48e3cde5"
+          },
+          {
+            "name": "addon_id",
+            "comment": "",
+            "dataType": "BIGINT(20)",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": true
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": true,
+              "pfk": false,
+              "widthName": 60,
+              "widthComment": 60,
+              "widthDataType": 68.45361328125,
+              "widthDefault": 60
+            },
+            "id": "ac1ba2b3-1cf3-4df9-b709-36ae971a12f7"
+          },
+          {
+            "name": "price",
+            "comment": "",
+            "dataType": "BIGINT(20)",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": true
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": false,
+              "pfk": false,
+              "widthName": 60,
+              "widthComment": 60,
+              "widthDataType": 68.45361328125,
+              "widthDefault": 60
+            },
+            "id": "79ca1f0d-5637-48c9-b077-a5bdca96c211"
+          }
+        ],
+        "ui": {
+          "active": true,
+          "left": 1282.0001,
+          "top": 643.8335,
+          "zIndex": 192,
+          "widthName": 115.470703125,
+          "widthComment": 60
+        },
+        "visible": true,
+        "id": "8e82460b-0729-46ba-871d-3555816a557d"
       }
     ],
     "indexes": []
@@ -1134,6 +1242,58 @@
         "constraintName": "fk_users_to_emergency_contacts",
         "visible": true,
         "id": "9c519c09-11e6-48bf-a500-e3bf9a7c1df5"
+      },
+      {
+        "identification": false,
+        "relationshipType": "ZeroN",
+        "startRelationshipType": "Dash",
+        "start": {
+          "tableId": "cdd5d1de-ac34-4840-b837-b4ff1ac9d5c1",
+          "columnIds": [
+            "f883645c-79ef-415f-82b9-edd3a62ada77"
+          ],
+          "x": 1157.2261265625,
+          "y": 719.2224,
+          "direction": "right"
+        },
+        "end": {
+          "tableId": "8e82460b-0729-46ba-871d-3555816a557d",
+          "columnIds": [
+            "5826d802-711d-42ea-af78-26af48e3cde5"
+          ],
+          "x": 1282.0001,
+          "y": 719.3335,
+          "direction": "left"
+        },
+        "constraintName": "fk_transactions_to_transaction_addons",
+        "visible": true,
+        "id": "befb9910-258c-4883-a9e4-6ee7870626b2"
+      },
+      {
+        "identification": false,
+        "relationshipType": "OneN",
+        "startRelationshipType": "Dash",
+        "start": {
+          "tableId": "3930007e-fb35-4836-8ecf-7528625cc344",
+          "columnIds": [
+            "24e08b6f-682d-4515-a49b-d94fb5d687a6"
+          ],
+          "x": 1471.756203515625,
+          "y": 489.8335,
+          "direction": "bottom"
+        },
+        "end": {
+          "tableId": "8e82460b-0729-46ba-871d-3555816a557d",
+          "columnIds": [
+            "ac1ba2b3-1cf3-4df9-b709-36ae971a12f7"
+          ],
+          "x": 1471.1963890625,
+          "y": 643.8335,
+          "direction": "top"
+        },
+        "constraintName": "fk_addons_to_transaction_addons",
+        "visible": true,
+        "id": "6e6dd45c-70f5-4064-9870-7937bd4df506"
       }
     ]
   }
