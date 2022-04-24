@@ -3,9 +3,9 @@
     "version": "2.2.11",
     "width": 2000,
     "height": 2000,
-    "scrollTop": -647,
-    "scrollLeft": -522,
-    "zoomLevel": 0.5,
+    "scrollTop": -768,
+    "scrollLeft": -541,
+    "zoomLevel": 0.7,
     "show": {
       "tableComment": true,
       "columnComment": true,
@@ -909,9 +909,9 @@
         ],
         "ui": {
           "active": false,
-          "left": 769.7504,
-          "top": 1154.3335,
-          "zIndex": 277,
+          "left": 771.0004,
+          "top": 1163.0835,
+          "zIndex": 282,
           "widthName": 121.95166015625,
           "widthComment": 60
         },
@@ -1277,6 +1277,29 @@
             "id": "07fca120-24a5-4728-a8fc-c0cdf282091f"
           },
           {
+            "name": "deleted_at",
+            "comment": "",
+            "dataType": "TIMESTAMP",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": false
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": false,
+              "pfk": false,
+              "widthName": 62.7216796875,
+              "widthComment": 60,
+              "widthDataType": 76.87060546875,
+              "widthDefault": 60
+            },
+            "id": "a69d7c88-101d-4ca0-a823-f65e164a4b39"
+          },
+          {
             "name": "created_at",
             "comment": "",
             "dataType": "TIMESTAMP",
@@ -1327,7 +1350,7 @@
           "active": false,
           "left": 770.0282,
           "top": 893.36,
-          "zIndex": 265,
+          "zIndex": 281,
           "widthName": 71.3798828125,
           "widthComment": 60
         },
@@ -1432,7 +1455,7 @@
           }
         ],
         "ui": {
-          "active": true,
+          "active": false,
           "left": 1258.4915,
           "top": 833.683,
           "zIndex": 279,
@@ -1520,8 +1543,8 @@
           "columnIds": [
             "26a0ac1f-ce19-49b1-8fce-507cea64b32f"
           ],
-          "x": 769.7504,
-          "y": 1260.5835,
+          "x": 771.0004,
+          "y": 1269.3335,
           "direction": "left"
         },
         "constraintName": "fk_users_to_emergency_contacts",
@@ -1616,7 +1639,7 @@
             "d94a9528-f061-4837-89f5-7e9a00dc07a9"
           ],
           "x": 1159.04040703125,
-          "y": 999.61,
+          "y": 1009.86,
           "direction": "right"
         },
         "end": {
