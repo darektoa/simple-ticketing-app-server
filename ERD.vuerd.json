@@ -3,9 +3,9 @@
     "version": "2.2.11",
     "width": 2000,
     "height": 2000,
-    "scrollTop": -749,
-    "scrollLeft": -356,
-    "zoomLevel": 0.7,
+    "scrollTop": -315,
+    "scrollLeft": -676,
+    "zoomLevel": 0.9,
     "show": {
       "tableComment": true,
       "columnComment": true,
@@ -1015,6 +1015,29 @@
             "id": "4230be5e-2b68-4ce5-90f3-662ca78e83b0"
           },
           {
+            "name": "deleted_at",
+            "comment": "",
+            "dataType": "TIMESTAMP",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": false
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": false,
+              "pfk": false,
+              "widthName": 62.7216796875,
+              "widthComment": 60,
+              "widthDataType": 76.87060546875,
+              "widthDefault": 60
+            },
+            "id": "008216a1-3f25-46de-bde8-6c54f7d2bc12"
+          },
+          {
             "name": "created_at",
             "comment": "",
             "dataType": "TIMESTAMP",
@@ -1062,10 +1085,10 @@
           }
         ],
         "ui": {
-          "active": false,
-          "left": 768.8214,
-          "top": 372.3333,
-          "zIndex": 274,
+          "active": true,
+          "left": 767.1547,
+          "top": 344.0002,
+          "zIndex": 294,
           "widthName": 60,
           "widthComment": 60
         },
@@ -1609,8 +1632,8 @@
           "columnIds": [
             "24e08b6f-682d-4515-a49b-d94fb5d687a6"
           ],
-          "x": 1157.83360703125,
-          "y": 458.0833,
+          "x": 1156.16690703125,
+          "y": 440.0002,
           "direction": "right"
         },
         "end": {
