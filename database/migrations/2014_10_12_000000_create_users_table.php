@@ -26,6 +26,7 @@ class CreateUsersTable extends Migration
             $table->smallInteger('id_card_type');
             $table->string('id_card_number', 20);
             $table->string('blood_type', 3)->nullable();
+            $table->string('company')->nullable();
             $table->rememberToken();
             $table->softDeletes();
             $table->timestamps();
