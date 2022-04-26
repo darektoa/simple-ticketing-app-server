@@ -24,6 +24,7 @@ class CreateUsersTable extends Migration
             $table->date('birth_date');
             $table->smallInteger('gender');
             $table->smallInteger('id_card_type');
+            $table->string('id_card_number', 20);
             $table->rememberToken();
             $table->softDeletes();
             $table->timestamps();
