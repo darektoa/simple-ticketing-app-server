@@ -34,4 +34,9 @@ class User extends Authenticatable
     public function receiveTransactions() {
         return $this->hasMany(Transaction::class, 'receiver_id');
     }
+
+
+    public function emergencyContact() {
+        return $this->hasMany(EmergencyContact::class);
+    }
 }
