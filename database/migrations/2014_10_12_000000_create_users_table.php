@@ -31,6 +31,7 @@ class CreateUsersTable extends Migration
             $table->string('province', 100);
             $table->string('city', 100);
             $table->string('postal_code', 20);
+            $table->text('address');
             $table->rememberToken();
             $table->softDeletes();
             $table->timestamps();
