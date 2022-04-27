@@ -28,6 +28,7 @@ class CreateUsersTable extends Migration
             $table->string('blood_type', 3)->nullable();
             $table->string('company')->nullable();
             $table->string('nationality', 100);
+            $table->string('province', 100);
             $table->rememberToken();
             $table->softDeletes();
             $table->timestamps();
