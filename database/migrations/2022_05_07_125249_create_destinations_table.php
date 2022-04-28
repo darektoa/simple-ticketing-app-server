@@ -19,6 +19,7 @@ return new class extends Migration
             $table->bigInteger('price');
             $table->date('start_at');
             $table->date('end_at');
+            $table->softDeletes();
             $table->timestamps();
         });
     }
