@@ -15,6 +15,9 @@ return new class extends Migration
     {
         Schema::create('transaction_destinations', function (Blueprint $table) {
             $table->id();
+            $table->foreignId('transaction_id')->constrained();
+            $table->foreignId('destination_id')->constrained();
+            $table->bigInteger('price');
             $table->timestamps();
         });
     }
