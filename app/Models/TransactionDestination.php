@@ -15,4 +15,9 @@ class TransactionDestination extends Model
     public function transaction() {
         return $this->belongsTo(Transaction::class);
     }
+
+
+    public function destination() {
+        return $this->belongsTo(Destination::class);
+    }
 }
