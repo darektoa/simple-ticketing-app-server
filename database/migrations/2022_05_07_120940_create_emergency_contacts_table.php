@@ -15,7 +15,7 @@ return new class extends Migration
     {
         Schema::create('emergency_contacts', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('user_id');
+            $table->foreignId('user_id')->constrained();
             $table->string('name', 40);
             $table->string('phone', 20);
             $table->softDeletes();
