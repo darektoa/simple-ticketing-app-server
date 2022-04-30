@@ -50,6 +50,11 @@ class Transaction extends Model
     }
 
 
+    public function destination() {
+        return $this->hasOne(TransactionDestination::class);
+    }
+
+
     protected function statusName(): Attribute{
         $get = function() {
             $status      = $this->status;
