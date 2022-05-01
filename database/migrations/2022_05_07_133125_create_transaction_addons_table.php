@@ -15,6 +15,9 @@ return new class extends Migration
     {
         Schema::create('transaction_addons', function (Blueprint $table) {
             $table->id();
+            $table->foreignId('transaction_id')->constrained();
+            $table->foreignId('addon_id')->constrained();
+            $table->bigInteger('price');
             $table->timestamps();
         });
     }
