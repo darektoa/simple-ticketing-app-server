@@ -15,4 +15,9 @@ class TransactionAddon extends Model
     public function transaction() {
         return $this->belongsTo(Transaction::class);
     }
+
+
+    public function addon() {
+        return $this->belongsTo(Addon::class);
+    }
 }
