@@ -50,6 +50,11 @@ class Transaction extends Model
     }
 
 
+    public function addon() {
+        return $this->hasOne(TransactionAddon::class);
+    }
+
+
     public function destination() {
         return $this->hasOne(TransactionDestination::class);
     }
