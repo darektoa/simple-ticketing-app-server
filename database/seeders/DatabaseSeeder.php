@@ -13,9 +13,9 @@ class DatabaseSeeder extends Seeder
             UserSeeder::class,
         ]);
 
-        User::factory(20)
-            ->hasSendTransactions(1)
-            ->hasReceiveTransactions(1)
-            ->create();
+        // User::factory(20)
+        //     ->hasSendTransactions(1)
+        //     ->hasReceiveTransactions(1)
+        //     ->create();
     }
 }
