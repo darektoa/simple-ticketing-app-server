@@ -11,6 +11,7 @@ class AddonSeeder extends Seeder
     public function run()
     {
         $addons = collect([
+            // name, price
             ['Vest (size: S)', 150000],
             ['Vest (size: M)', 150000],
             ['Vest (size: L)', 150000],
