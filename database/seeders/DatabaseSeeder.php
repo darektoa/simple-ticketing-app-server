@@ -10,7 +10,8 @@ class DatabaseSeeder extends Seeder
     public function run()
     {
         $this->call([
-            UserSeeder::class,
+            AddonSeeder::class,
+            // UserSeeder::class,
         ]);
 
         // User::factory(20)
