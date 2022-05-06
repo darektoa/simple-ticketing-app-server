@@ -18,8 +18,6 @@ class AddonResource extends JsonResource
             'id'        => $this->id,
             'name'      => $this->name,
             'price'     => $this->price,
-            'start_at'  => $this->start_at,
-            'end_at'    => $this->end_at,
         ];
     }
 }
