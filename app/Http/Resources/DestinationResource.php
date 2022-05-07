@@ -14,6 +14,12 @@ class AddonResource extends JsonResource
      */
     public function toArray($request)
     {
-        return [];
+        return [
+            'id'        => $this->id,
+            'name'      => $this->name,
+            'price'     => $this->price,
+            'start_at'  => $this->start_at,
+            'end_at'    => $this->end_at,
+        ];
     }
 }
