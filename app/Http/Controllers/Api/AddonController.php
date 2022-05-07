@@ -5,16 +5,16 @@ namespace App\Http\Controllers\Api;
 use App\Helpers\ResponseHelper;
 use App\Http\Controllers\Controller;
 use App\Http\Resources\AddonResource;
-use App\Models\Destination;
+use App\Models\Addon;
 use Illuminate\Http\Request;
 
 class AddonController extends Controller
 {
     public function index() {
-        $destinations = Destination::all();
+        $addons = Addon::all();
 
         return ResponseHelper::make(
-            AddonResource::collection($destinations)
+            AddonResource::collection($addons)
         );
     }
 }
