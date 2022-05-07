@@ -10,3 +10,4 @@ use Illuminate\Support\Facades\Route;
 // });
 
 Route::get('/addons', [AddonController::class, 'index']);
+Route::get('/destinations', [DestinationController::class, 'index']);
