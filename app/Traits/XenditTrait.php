@@ -18,7 +18,7 @@ trait XenditTrait{
       'payer_email'     => $transaction->receiver->email,
       'fixed_va'        => true,
       'customer'        => [
-        'given_names'     => $transaction->receiver->name,
+        'given_names'     => $transaction->receiver->name ?? $transaction->receiver->first_name,
         'email'           => $transaction->receiver->email,
       ],
       'payment_methods' => [
