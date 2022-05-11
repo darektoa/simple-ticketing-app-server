@@ -13,7 +13,7 @@ trait XenditTrait{
     $invoice = XenditInvoice::create([
       'for-user-id'     => $ownerId,
       'external_id'     => $transaction->uuid,
-      'amount'          => $transaction->balance,
+      'amount'          => $transaction->amount,
       'description'     => "Pembayaran: $description",
       'payer_email'     => $transaction->receiver->email,
       'fixed_va'        => true,
