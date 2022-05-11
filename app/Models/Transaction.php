@@ -14,6 +14,8 @@ class Transaction extends Model
 
     protected $appends   = ['status_name', 'type_name'];
 
+    protected $casts     = ['detail' => 'json'];
+
     protected $guarded   = ['id'];
 
     public $status_names = [
