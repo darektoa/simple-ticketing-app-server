@@ -15,6 +15,10 @@ class User extends Authenticatable
 {
     use HasApiTokens, HasFactory, Notifiable, Searchable, SoftDeletes;
 
+    protected $appends = [
+        'gender_name'
+    ];
+
     protected $casts = [
         'email_verified_at' => 'datetime',
         'detail'            => 'json',
