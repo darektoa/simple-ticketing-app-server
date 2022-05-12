@@ -4,6 +4,7 @@ namespace App\Models;
 
 use App\Traits\Models\Searchable;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
+use Illuminate\Database\Eloquent\Casts\Attribute;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\SoftDeletes;
 use Illuminate\Foundation\Auth\User as Authenticatable;
@@ -24,6 +25,11 @@ class User extends Authenticatable
     protected $hidden = [
         'password',
         'remember_token',
+    ];
+
+    public $genderNames = [
+        1 => 'Male',
+        2 => 'Female',
     ];
 
 
