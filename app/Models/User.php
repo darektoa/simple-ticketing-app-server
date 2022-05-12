@@ -46,4 +46,13 @@ class User extends Authenticatable
     public function emergencyContact() {
         return $this->hasMany(EmergencyContact::class);
     }
+
+
+    public function genderName():Attribute {
+        return Attribute::make(
+            get: fn($value, $attrs) => (
+                $this->genderNames[$attrs['gender']] ?? 'Unknown'
+            ),
+        );
+    }
 }
