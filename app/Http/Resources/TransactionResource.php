@@ -14,6 +14,26 @@ class TransactionResource extends JsonResource
      */
     public function toArray($request)
     {
-        return parent::toArray($request);
+        $destinationLoaded  = $this->relationLoaded('destination');
+        $addonLoaded        = $this->relationLoaded('addon');
+
+        return [
+            'id'            => $this->id,
+            'code'          => $this->code,
+            'amount'        => $this->amount,
+            'status'        => [
+                'id'    => $this->status,
+                'name'  => $this->status_name,
+            ],
+            'type'          => [
+                'id'    => $this->type,
+                'name'  => $this->type_name,
+            ],
+            'sender'        => UserResource::make($this->whenLoaded('sender')),
+            'receiver'      => UserResource::make($this->whenLoaded('receiver')),
+            'destination'   => DestinationResource::make($this->when($destinationLoaded, $this->destination->destination)),
+            'addons'        => AddonResource::make($this->when($addonLoaded, $this->addon->addon)),
+            'detail'        => $this->detail,
+        ];
     }
 }
