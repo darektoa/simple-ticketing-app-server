@@ -6,9 +6,7 @@ use App\Exceptions\ErrorException as Error;
 use App\Helpers\ResponseHelper;
 use App\Http\Controllers\Controller;
 use App\Http\Resources\TransactionResource;
-use App\Models\Addon;
-use App\Models\Destination;
-use App\Models\User;
+use App\Models\{Addon, Destination, Transaction, User};
 use App\Traits\Api\RequestValidator;
 use App\Traits\XenditTrait;
 use Illuminate\Http\Request;
@@ -76,6 +74,21 @@ class TransactionController extends Controller
                 ]],
             ]);
 
+            return ResponseHelper::make(
+                TransactionResource::make($transaction->load(['receiver', 'destination', 'addon']))
+            );
+        }catch(Error $err) {
+            return ResponseHelper::error(
+                $err->getErrors(),
+                $err->getMessage(),
+                $err->getCode(),
+            );
+        }
+    }
+
+
+    public function show(Transaction $transaction) {
+        try{
             return ResponseHelper::make(
                 TransactionResource::make($transaction->load(['receiver', 'destination', 'addon']))
             );
