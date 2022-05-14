@@ -14,4 +14,5 @@ Route::get('/destinations', [DestinationController::class, 'index']);
 
 Route::prefix('tickets')->group(function() {
     Route::post('/', [TransactionController::class, 'store']);
+    Route::get('/{transaction:code}', [TransactionController::class, 'show']);
 });
