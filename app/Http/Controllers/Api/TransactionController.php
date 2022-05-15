@@ -11,6 +11,7 @@ use App\Traits\Api\RequestValidator;
 use App\Traits\XenditTrait;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Str;
 
 class TransactionController extends Controller
 {
@@ -92,6 +93,32 @@ class TransactionController extends Controller
             return ResponseHelper::make(
                 TransactionResource::make($transaction->load(['receiver', 'destination', 'addon']))
             );
+        }catch(Error $err) {
+            return ResponseHelper::error(
+                $err->getErrors(),
+                $err->getMessage(),
+                $err->getCode(),
+            );
+        }
+    }
+
+
+    public function xenditCallback(Request $request) {
+        try{
+            $transaction = Transaction::where('code', $request->external_id)->first();
+            
+            if(!$transaction) throw new Error('Not found', 404);
+
+            $invoices   = collect($transaction->detail['invoices']);
+            $status     = Str::lower($request->status);
+            $invoices->put($status, $request->all());
+
+            $transaction->update([
+                'status' => 2,
+                'detail' => ['invoices' => $invoices],
+            ]);
+
+            return ResponseHelper::make();
         }catch(Error $err) {
             return ResponseHelper::error(
                 $err->getErrors(),
