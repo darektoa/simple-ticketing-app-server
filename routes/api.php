@@ -12,7 +12,13 @@ use Illuminate\Support\Facades\Route;
 Route::get('/addons', [AddonController::class, 'index']);
 Route::get('/destinations', [DestinationController::class, 'index']);
 
-Route::prefix('tickets')->group(function() {
+Route::prefix('/tickets')->group(function() {
     Route::post('/', [TransactionController::class, 'store']);
     Route::get('/{transaction:code}', [TransactionController::class, 'show']);
+});
+
+Route::prefix('/xendit')->group(function() {
+    Route::middleware(['xendit.callback'])->group(function() {
+        Route::post('/callback', [TransactionController::class, 'xenditCallback']);
+    });
 });
