@@ -32,7 +32,7 @@ class TransactionResource extends JsonResource
             'sender'        => UserResource::make($this->whenLoaded('sender')),
             'receiver'      => UserResource::make($this->whenLoaded('receiver')),
             'destination'   => DestinationResource::make($this->when($destinationLoaded, $this->destination->destination)),
-            'addons'        => AddonResource::make($this->when($addonLoaded, $this->addon->addon)),
+            'addons'        => AddonResource::make($this->when($addonLoaded, $this->addon->addon ?? null)),
             'detail'        => $this->detail,
         ];
     }
