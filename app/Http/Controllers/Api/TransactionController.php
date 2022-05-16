@@ -54,7 +54,7 @@ class TransactionController extends Controller
             $destination = Destination::find($request->destination_id);
             $addon       = Addon::find($request->addons_id ?? null);
             $transaction = $user->receiveTransactions()->create([
-                'amount'    => 250000,
+                'amount'    => $destination->price + $addon->price ?? 0,
                 'type'      => 2,
             ]);
  
