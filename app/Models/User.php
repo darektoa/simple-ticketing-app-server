@@ -36,6 +36,10 @@ class User extends Authenticatable
         2 => 'Female',
     ];
 
+    public $roleNames = [
+        1 => 'Admin',
+    ];
+
 
     public function sendTransactions() {
         return $this->hasMany(Transaction::class, 'sender_id');
