@@ -23,6 +23,7 @@ class CreateUsersTable extends Migration
             $table->string('phone', 20);
             $table->date('birth_date');
             $table->smallInteger('gender');
+            $table->smallInteger('role');
             $table->json('detail')->nullable();
             $table->rememberToken();
             $table->softDeletes();
