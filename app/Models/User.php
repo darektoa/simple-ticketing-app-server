@@ -58,4 +58,13 @@ class User extends Authenticatable
             ),
         );
     }
+
+
+    public function roleName() {
+        return Attribute::make(
+            get: fn($value, $attrs) => (
+                $this->roleNames[$attrs['role']] ?? 'Unknown'
+            ),
+        );
+    }
 }
