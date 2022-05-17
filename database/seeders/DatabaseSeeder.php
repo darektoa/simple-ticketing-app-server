@@ -12,7 +12,7 @@ class DatabaseSeeder extends Seeder
         $this->call([
             AddonSeeder::class,
             DestinationSeeder::class,
-            // UserSeeder::class,
+            UserSeeder::class,
         ]);
 
         // User::factory(20)
