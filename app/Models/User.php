@@ -38,6 +38,7 @@ class User extends Authenticatable
 
     public $roleNames = [
         1 => 'Admin',
+        2 => 'User',
     ];
 
 
