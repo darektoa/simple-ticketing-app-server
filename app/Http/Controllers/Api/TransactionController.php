@@ -42,6 +42,7 @@ class TransactionController extends Controller
                 'phone'         => $request->phone,
                 'birth_date'    => $request->birth_date,
                 'gender'        => $request->gender,
+                'role'          => 2,
             ]);
 
             $user->update([
