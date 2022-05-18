@@ -3,7 +3,6 @@
     <x-card class="mb-4">
         <x-card.head>
             <x-text bold color="primary" value="Transactions" />
-            <x-button.modal class="ms-3" target="modalTopup" value="Topup"/>
             <x-form method="GET" class="ms-auto d-none d-md-flex">
                 <x-input name="search" placeholder="Search..." value="{{ request()->search ?? '' }}" class="me-2"/>
                 <x-button outline type="submit" value="Search" />
