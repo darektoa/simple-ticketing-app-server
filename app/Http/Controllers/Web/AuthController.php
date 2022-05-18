@@ -20,6 +20,7 @@ class AuthController extends Controller
         $account = Auth::attempt([
             'email'     => $email,
             'password'  => $password,
+            'role'      => 1,
         ]);
 
         if(!$account) 
