@@ -34,6 +34,7 @@
                         <th>#</th>
                         <th>Name</th>
                         <th>Email</th>
+                        <th>Role</th>
                         <th>Action</th>
                     </tr>
                 </thead>
@@ -50,6 +51,7 @@
                         <td class="align-middle">{{ $number }}</td>
                         <td class="align-middle">{{ "{$user->first_name} {$user->last_name}" }}</td>
                         <td class="align-middle">{{ $user->email }}</td>
+                        <td class="align-middle">{{ $user->role_name }}</td>
                         <td class="align-middle">
                             <x-view>
                                 <x-button color="danger" :action="route('users.destroy', [$user->id])" method="DELETE">
