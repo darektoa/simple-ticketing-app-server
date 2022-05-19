@@ -28,7 +28,7 @@
                 </x-modal.body>
             </x-modal>
 
-            <table class="table table-hover" style="min-height: 400px">
+            <table class="table table-hover">
                 <thead>
                     <tr>
                         <th>#</th>
