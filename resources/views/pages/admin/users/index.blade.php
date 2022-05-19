@@ -9,7 +9,7 @@
                 <x-button outline type="submit" value="Search" />
             </x-form>
         </x-card.head>
-        <x-card.body class="table-responsive">
+        <x-card.body class="table-responsive" style="min-height: 400px">
             
             <!-- MODAL ADD USER -->
             <x-modal id="modalAddUser" title="Add User" :action="route('users.store')">
