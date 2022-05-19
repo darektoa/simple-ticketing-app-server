@@ -35,7 +35,7 @@
                         <th>Name</th>
                         <th>Email</th>
                         <th>Role</th>
-                        <th>Action</th>
+                        {{-- <th>Action</th> --}}
                     </tr>
                 </thead>
                 <tbody>
@@ -52,7 +52,7 @@
                         <td class="align-middle">{{ "{$user->first_name} {$user->last_name}" }}</td>
                         <td class="align-middle">{{ $user->email }}</td>
                         <td class="align-middle">{{ $user->role_name }}</td>
-                        <td class="align-middle">
+                        {{-- <td class="align-middle">
                             <x-view>
                                 <x-button color="danger" :action="route('users.destroy', [$user->id])" method="DELETE">
                                     <i class="fas fa-trash"></i>
@@ -61,7 +61,7 @@
                                     <i class="fas fa-pencil"></i>
                                 </x-button.modal>
                             </x-view>
-                        </td>
+                        </td> --}}
                     </tr>
                     @endforeach
 
