@@ -48,7 +48,7 @@
 
                     <tr>
                         <td class="align-middle">{{ $number }}</td>
-                        <td class="align-middle">{{ $user->name }}</td>
+                        <td class="align-middle">{{ "{$user->first_name} {$user->last_name}" }}</td>
                         <td class="align-middle">{{ $user->email }}</td>
                         <td class="align-middle">
                             <x-view>
