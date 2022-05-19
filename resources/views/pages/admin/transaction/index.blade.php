@@ -8,7 +8,7 @@
                 <x-button outline type="submit" value="Search" />
             </x-form>
         </x-card.head>
-        <x-card.body>
+        <x-card.body style="min-height: 400px">
 
             <!-- MODAL TOPUP -->
             <x-modal id="modalTopup" title="Topup" :action="route('transactions.topup')">
