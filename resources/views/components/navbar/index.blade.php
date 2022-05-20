@@ -1,6 +1,6 @@
 @php
   $user       = auth()->user();
-  $name       = $user->name ?? 'Name';
+  $name       = "{$user->first_name} {$user->last_name}" ?? 'Name';
   $initial    = $name[0];
 @endphp
 
