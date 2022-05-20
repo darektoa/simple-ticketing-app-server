@@ -13,7 +13,11 @@ class TransactionController extends Controller
     public function index(Request $request) {
         $type         = $request->type;
         $search       = $request->search;
-        $transactions = Transaction::latest();
+        $transactions = Transaction::with([
+            'destination.destination',
+            'addon.addon',
+            'receiver'
+        ])->latest();
 
         if($type)
             $transactions = $transactions->where('type', $type);
