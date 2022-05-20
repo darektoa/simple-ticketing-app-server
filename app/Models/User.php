@@ -16,7 +16,7 @@ class User extends Authenticatable
     use HasApiTokens, HasFactory, Notifiable, Searchable, SoftDeletes;
 
     protected $appends = [
-        'gender_name', 'full_name'
+        'full_name', 'gender_name', 'role_name'
     ];
 
     protected $casts = [
