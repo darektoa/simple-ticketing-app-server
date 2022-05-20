@@ -61,11 +61,20 @@ class User extends Authenticatable
     }
 
 
-    public function roleName() {
+    public function roleName():Attribute {
         return Attribute::make(
             get: fn($value, $attrs) => (
                 $this->roleNames[$attrs['role']] ?? 'Unknown'
             ),
+        );
+    }
+
+
+    public function fullName():Attribute {
+        return Attribute::make(
+            get: fn($value, $attrs) => (
+                "{$attrs['first_name']} {$attrs['last_name']}"
+            )
         );
     }
 }
