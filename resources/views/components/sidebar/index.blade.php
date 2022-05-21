@@ -9,7 +9,7 @@
 <x-sidebar.sidebar theme="dark">
     <x-sidebar.brand 
       img="{{ asset('assets/img/brand.png') }}"
-      name="REXENSOFT"
+      name="PHRI"
       route="/dashboard" />
   
     <x-sidebar.divider />
