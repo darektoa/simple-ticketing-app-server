@@ -10,6 +10,19 @@
         </x-card.head>
         <x-card.body style="min-height: 400px">
 
+            <!-- MODAL SHOW TRANSACTION -->
+            <x-modal id="modalShowTrx" title="Detail">
+                <x-modal.body>
+                    <div class="mb-1">Name: <span id="trxReceiverName"></span></div>
+                    <div class="mb-1">Phone: <span id="trxReceiverPhone"></span></div>
+                    <x-input.label class="mt-3 fw-bold">Detail:</x-input.label>
+                    <div id="trxReceiverDetail"></div>
+                </x-modal.body>
+                <x-modal.foot>
+                    <x-button outline color="secondary" data-bs-dismiss="modal" value="Close" />
+                </x-modal.foot>
+            </x-modal>
+
             <table class="table table-hover">
                 <thead>
                     <tr>
