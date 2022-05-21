@@ -17,10 +17,38 @@
                 </x-modal.body>
             </x-modal>
 
-            <x-table.instant
-                :data="$transactions->items()"
-                hidden="sender_id|status|type|detail|updated_at"
-                visible="created_at:created on" />
+            <table class="table table-hover">
+                <thead>
+                    <tr>
+                        <th>Code</th>
+                        <th>Name</th>
+                        <th>Destination</th>
+                        <th>Addons</th>
+                        <th>Amount</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+
+                    @foreach($transactions as $transaction)
+                    @php
+                        $receiver = $transaction->receiver;
+                    @endphp
+                    <tr>
+                        <td class="align-middle">{{ $transaction->code }}</td>
+                        <td class="align-middle">
+                            <h6 class="fw-bold m-0">{{ $receiver->full_name }} [{{ $receiver->gender_name }}]</h6>
+                            <small>{{ $receiver->email }}</small>
+                        </td>
+                        <td class="align-middle">{{ $transaction->destination->destination->name }}</td>
+                        <td class="align-middle">{{ $transaction->addon->addon->name ?? 'None' }}</td>
+                        <td class="align-middle">{{ $transaction->amount }}</td>
+                        <td class="align-middle">{{ $transaction->status_name }}</td>
+                    </tr>
+                    @endforeach
+
+                </tbody>
+            </table>
 
             {{ $transactions->links() }}
         </x-card.body>
