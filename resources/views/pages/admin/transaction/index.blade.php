@@ -10,13 +10,6 @@
         </x-card.head>
         <x-card.body style="min-height: 400px">
 
-            <!-- MODAL TOPUP -->
-            <x-modal id="modalTopup" title="Topup" :action="route('transactions.topup')">
-                <x-modal.body>
-                    <x-input type="text" name="amount" label="Amount:" />
-                </x-modal.body>
-            </x-modal>
-
             <table class="table table-hover">
                 <thead>
                     <tr>
