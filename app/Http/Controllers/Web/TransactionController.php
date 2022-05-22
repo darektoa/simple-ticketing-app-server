@@ -11,7 +11,7 @@ use RealRashid\SweetAlert\Facades\Alert;
 class TransactionController extends Controller
 {
     public function index(Request $request) {
-        $type         = $request->type;
+        $status       = $request->status;
         $search       = $request->search;
         $transactions = Transaction::with([
             'destination.destination',
@@ -19,8 +19,8 @@ class TransactionController extends Controller
             'receiver'
         ])->latest();
 
-        if($type)
-            $transactions = $transactions->where('type', $type);
+        if($status)
+            $transactions = $transactions->where('status', $status);
         if($search)
             $transactions = $transactions->search($search);
 
