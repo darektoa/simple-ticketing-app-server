@@ -30,6 +30,7 @@ class SuccessRegisterMail extends Mailable
      */
     public function build()
     {
-        return $this->view('emails.success-register');
+        return $this->subject($this->data->title)
+            ->view('emails.success-register');
     }
 }
