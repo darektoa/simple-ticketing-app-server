@@ -121,7 +121,7 @@ class TransactionController extends Controller
             $status     = Str::lower($request->status);
             $invoices->put($status, $request->all());
 
-            $transaction->update([
+            if($status == 'paid') $transaction->update([
                 'status' => 2,
                 'detail' => ['invoices' => $invoices],
             ]);
