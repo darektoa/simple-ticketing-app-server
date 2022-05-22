@@ -49,7 +49,7 @@
                         </td>
                         <td class="align-middle">{{ $transaction->destination->destination->name }}</td>
                         <td class="align-middle">{{ $transaction->addon->addon->name ?? 'None' }}</td>
-                        <td class="align-middle">{{ $transaction->amount }}</td>
+                        <td class="align-middle">{{ number_format($transaction->amount) }}</td>
                         <td class="align-middle">{{ $transaction->status_name }}</td>
                         <td class="align-middle">
                             <x-view>
