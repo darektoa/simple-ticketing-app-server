@@ -6,11 +6,12 @@ use App\Exceptions\ErrorException as Error;
 use App\Helpers\ResponseHelper;
 use App\Http\Controllers\Controller;
 use App\Http\Resources\TransactionResource;
+use App\Mail\SuccessRegisterMail;
 use App\Models\{Addon, Destination, Transaction, User};
 use App\Traits\Api\RequestValidator;
 use App\Traits\XenditTrait;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\{Hash, Mail};
 use Illuminate\Support\Str;
 
 class TransactionController extends Controller
@@ -76,8 +77,14 @@ class TransactionController extends Controller
                 ]],
             ]);
 
+            $transaction->load(['receiver', 'destination', 'addon']);
+            Mail::to($user->email)->send(new SuccessRegisterMail([
+                'title' => '🙌 Sucessfully Registered to PHRI Event',
+                'data'  => $transaction,
+            ]));
+
             return ResponseHelper::make(
-                TransactionResource::make($transaction->load(['receiver', 'destination', 'addon']))
+                TransactionResource::make($transaction)
             );
         }catch(Error $err) {
             return ResponseHelper::error(
