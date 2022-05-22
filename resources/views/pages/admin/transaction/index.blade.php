@@ -67,4 +67,33 @@
             {{ $transactions->links() }}
         </x-card.body>
     </x-card>
+
+    <x-layout.section scripts>
+        <script>
+            const onClickHandler = (data, action=null) => {
+                const modal   = document.querySelector(`#modalShowTrx`);
+                const form    = modal.querySelector('.modal-content .modal-body');
+                const elmnts  = {
+                    title   : modal.querySelector('.modal-title'),
+                    name    : form.querySelector('#trxReceiverName'),
+                    phone   : form.querySelector('#trxReceiverPhone'),
+                    detail  : form.querySelector('#trxReceiverDetail'),
+                };
+                console.log(Object.entries(data.receiver.detail));
+                elmnts.title.innerText  = data.code;
+                elmnts.name.innerText   = data.receiver.full_name;
+                elmnts.phone.innerText  = data.receiver.phone;
+                elmnts.detail.innerHTML = Object.entries(data.receiver.detail).map((item) => (
+                    `<div class="mb-1"><i>${item[0]}</i>: ${item[1]}</div>`
+                )).join('');
+            }
+    
+            document.querySelectorAll('*[data-bs-target="#modalShowTrx"]')
+            .forEach(button => button.addEventListener('click', () => {
+                const data = JSON.parse(button.getAttribute('data'));
+                console.log(data);
+                onClickHandler(data);
+            }))
+        </script>
+    </x-layout.section>
 </x-layout>
