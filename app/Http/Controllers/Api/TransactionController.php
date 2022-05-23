@@ -125,6 +125,11 @@ class TransactionController extends Controller
                 'status' => 2,
                 'detail' => ['invoices' => $invoices],
             ]);
+            
+            if($status == 'expired') $transaction->update([
+                'status' => 4,
+                'detail' => ['invoices' => $invoices],
+            ]);
 
             return ResponseHelper::make();
         }catch(Error $err) {
