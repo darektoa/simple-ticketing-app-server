@@ -1,4 +1,8 @@
-@php $data = $data->data; @endphp
+@php 
+    use Carbon\Carbon;
+    $data        = $data->data;
+    $destination = $data->destination->destination;
+@endphp
 
 <!DOCTYPE html>
 <html lang="en">
@@ -34,7 +38,7 @@
             </tr>
             <tr>
                 <th>Kota Yang Diikuti</th>
-                <td> : {{ $data->destination->destination->name }}</td>
+                <td> : {{ $destination->name }} ({{ Carbon::make($destination->start_at)->format('d M Y') }} - {{ Carbon::make($destination->end_at)->format('d M Y') }})</td>
             </tr>
             <tr>
                 <th>Addons</th>
