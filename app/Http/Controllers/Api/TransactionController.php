@@ -6,7 +6,7 @@ use App\Exceptions\ErrorException as Error;
 use App\Helpers\ResponseHelper;
 use App\Http\Controllers\Controller;
 use App\Http\Resources\TransactionResource;
-use App\Mail\SuccessRegisterMail;
+use App\Mail\{SuccessPaidMail, SuccessRegisterMail};
 use App\Models\{Addon, Destination, Transaction, User};
 use App\Traits\Api\RequestValidator;
 use App\Traits\XenditTrait;
@@ -113,24 +113,33 @@ class TransactionController extends Controller
 
     public function xenditCallback(Request $request) {
         try{
-            $transaction = Transaction::where('code', $request->external_id)->first();
+            $transaction = Transaction::with(['receiver', 'destination', 'addon'])
+                ->where('code', $request->external_id)
+                ->first();
             
             if(!$transaction) throw new Error('Not found', 404);
 
             $invoices   = collect($transaction->detail['invoices']);
             $status     = Str::lower($request->status);
             $invoices->put($status, $request->all());
-
-            if($status == 'paid') $transaction->update([
-                'status' => 2,
-                'detail' => ['invoices' => $invoices],
-            ]);
             
             if($status == 'expired') $transaction->update([
                 'status' => 4,
                 'detail' => ['invoices' => $invoices],
             ]);
 
+            if($status == 'paid') {
+                $transaction->update([
+                    'status' => 2,
+                    'detail' => ['invoices' => $invoices],
+                ]);
+
+                Mail::to($transaction->receiver->email)->send(new SuccessPaidMail([
+                    'title' => '✅ Pembayaran Berhasil',
+                    'data'  => $transaction,
+                ]));
+            }
+            
             return ResponseHelper::make();
         }catch(Error $err) {
             return ResponseHelper::error(
