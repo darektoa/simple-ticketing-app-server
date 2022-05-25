@@ -135,7 +135,7 @@ class TransactionController extends Controller
                 ]);
 
                 Mail::to($transaction->receiver->email)->send(new SuccessPaidMail([
-                    'title' => '✅ Pembayaran Berhasil',
+                    'title' => '✅ Pembayaran Berhasil - PHRI Bike Event',
                     'data'  => $transaction,
                 ]));
             }
