@@ -79,7 +79,7 @@ class TransactionController extends Controller
 
             $transaction->load(['receiver', 'destination', 'addon']);
             Mail::to($user->email)->send(new SuccessRegisterMail([
-                'title' => '🙌 Sucessfully Registered to PHRI Event',
+                'title' => '🙌 Menunggu Pembayaran - PHRI Bike Event',
                 'data'  => $transaction,
             ]));
 
