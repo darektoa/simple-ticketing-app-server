@@ -25,7 +25,7 @@ class TransactionController extends Controller
                 'addons_id'         => 'nullable|exists:addons,id',
                 'first_name'        => 'required|min:2|max:20',
                 'last_name'         => 'required|min:2|max:20',
-                'email'             => 'required|email|unique:users,email',
+                'email'             => 'required|email',
                 'phone'             => 'required|min:10|max:20',
                 'birth_date'        => 'required|date',
                 'gender'            => 'required|in:1,2',
