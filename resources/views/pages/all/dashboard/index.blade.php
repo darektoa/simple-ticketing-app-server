@@ -7,4 +7,8 @@
         <x-card.info title="Total Buying" value="48" icon="fa-cart-shopping text-gray-300" color="success" />
         <x-card.info title="Total Refund" value="10" icon="fa-clock-rotate-left text-gray-300" color="danger" />
     </x-view.row>
+
+    <x-table.instant 
+        :data="$destinations"   
+    />
 </x-layout.section>
