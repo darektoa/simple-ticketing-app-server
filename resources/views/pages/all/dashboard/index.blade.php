@@ -9,6 +9,7 @@
     </x-view.row>
 
     <x-table.instant 
+        hidden="destination_id"
         :data="$destinations"   
     />
 </x-layout.section>
