@@ -10,22 +10,24 @@
         <x-card.info title="Expired Transactions" :value="Transaction::where('status', 4)->count()" icon="fa-xmark text-gray-300" color="danger" />
     </x-view.row>
 
-    <table class="table table-hover mb-0">
-        <thead>
-            <tr>
-                <th>Destination</th>
-                <th>Total Registrants</th>
-            </tr>
-        </thead>
-        <tbody>
-
-            @foreach($destinations as $destination)
-            <tr>
-                <td class="align-middle">{{ $destination->destination->name }}</td>
-                <td class="align-middle">{{ $destination->total }}</td>
-            </tr>
-            @endforeach
-
-        </tbody>
-    </table>
+    <x-card style="min-height: 200px">
+        <table class="table table-hover mb-0">
+            <thead>
+                <tr>
+                    <th>Destination</th>
+                    <th>Total Registrants</th>
+                </tr>
+            </thead>
+            <tbody>
+    
+                @foreach($destinations as $destination)
+                <tr>
+                    <td class="align-middle">{{ $destination->destination->name }}</td>
+                    <td class="align-middle">{{ $destination->total }}</td>
+                </tr>
+                @endforeach
+    
+            </tbody>
+        </table>
+    </x-card>
 </x-layout.section>
